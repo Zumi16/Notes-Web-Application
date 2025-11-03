@@ -1,6 +1,17 @@
-/* const dialog = document.getElementById('noteDialog');
-    const openButton = document.getElementById('open-btn')
+const notes = [];
+const dialog = document.getElementById('noteDialog');
+const openNotesDialog = document.getElementById('addNotesBtn')
 
-    openButton.addEventListener('click', () => {
+    openNotesDialog.addEventListener('click', () => {
         dialog.showModal();
-    }); */
+    });
+
+function closeNoteDialog() {
+    dialog.close();
+}
+
+/*
+function addNewNotes() {
+   const dialog = document.getElementById('noteDialog');
+   dialog.showModal();
+}; */
