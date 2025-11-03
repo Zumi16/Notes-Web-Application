@@ -8,14 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=brightness_6">
 </head>
-<body class="font-sans bg-yellow-50">
-    <header class="flex p-5 px-15 border-b-2 justify-between h-17 items-center bg-yellow-100">
-        <h1 class="text-[25px] font-medium text-yellow-900">Notes Web Application</h1>
+<body class="font-sans bg-[#FCFCFC]">
+    <header class="flex p-5 px-15 border-b-3 justify-between h-17 items-center bg-[#FFFF85]">
+        <h1 class="text-[25px] font-medium">Notes Web Application</h1>
         <div class="flex font-medium gap-4">
-            <button id="addNotesBtn" class="max-h-11 border-2 bg-yellow-300 rounded-sm p-2 cursor-pointer border-yellow-500 text-yellow-900" 
+            <button id="addNotesBtn" class="max-h-11 border-2 bg-white rounded-sm p-2 cursor-pointer" 
             >✚ Add Note
             </button>
-            <button class="material-symbols-outlined bg-yellow-300 rounded-sm p-2 cursor-pointer border-2 border-yellow-500 text-yellow-800"
+            <button class="material-symbols-outlined bg-white rounded-sm p-2 cursor-pointer border-2"
             id="themeToggleBtn"
             >brightness_6
             </button>
@@ -23,33 +23,34 @@
     </header>
     
     <main class="grid grid-cols-5 px-24 py-14 text-center gap-x-16 gap-y-18">
-        <div class="bg-yellow-500 h-48">placeholder</div>
+        <div class="bg-yellow-500 h-48 min-w-50">placeholder</div>
         <div class="bg-yellow-500">placeholder</div>
         <div class="bg-yellow-500">placeholder</div>
         <div class="bg-yellow-500">placeholder</div>
         <div class="bg-yellow-500">placeholder</div>
     </main>
-    <dialog class="bg-white w-110 h-120 m-auto p-6 border-2 rounded-xl" id="noteDialog">
+    <dialog class="bg-white w-110 h-125 m-auto p-6 border-2 rounded-xl shadow-xl" id="noteDialog">
         <form id="noteForm" class="flex flex-col">
             <div id="dialogHeader">
-                <h2 id="dialogTitle" class="text-[28px] font-medium text-center">Add new note</h2>
-                <hr class="my-2">
+                <h2 id="dialogTitle" class="text-[28px] font-medium text-center">Add New Note</h2>
+                <hr class="border-1 my-2">
             </div>
 
             <div class="flex flex-col gap-1 my-2">
                 <label for="noteTitle" class="text-[24px]">Title</label>
-                <input type="text" id="noteTitle" class="w-97 h-10 border-2 text-[18] p-2 rounded-xl" placeholder="Enter note title..." required>
+                <input type="text" id="noteTitle" class="w-97 h-10 border-2 text-[18] p-2 rounded-xl" 
+                placeholder="Enter note title..." required>
             </div>
 
             <div class="flex flex-col gap-1 my-2">
                 <label for="noteContent" class="text-[18px]">Content</label>
-                <textarea id="noteContent" class="resize-none border-2 text-[18] p-2 rounded-xl" 
+                <textarea id="noteContent" class="resize-none border-2 text-[18] p-2 rounded-xl h-45 mb-4" 
                 placeholder="Write your note here..." required></textarea>
             </div>
 
-            <div class="flex text-center gap-5">
-                <button type="button" onclick="closeNoteDialog()">Cancel</button>
-                <button type="submit" onclick="save()">Save Note</button>
+            <div class="flex text-center gap-4">
+                <button type="button" class="border-2 p-2 rounded-sm bg-red-400 font-medium" onclick="closeNoteDialog()">Cancel</button>
+                <button type="submit" class="border-2 p-2 rounded-sm bg-emerald-300 font-medium" onclick="save()">Save Note</button>
             </div>
         </form>
     </dialog>
